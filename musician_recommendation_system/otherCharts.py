@@ -1,9 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# ✅ Load dataset with error handling
+# Load dataset with error handling
 try:
-    musicians_df = pd.read_csv("datasets/musicians_data.csv")  # Update path if needed
+    musicians_df = pd.read_csv("datasets/musicians_data.csv")  
 except FileNotFoundError:
     print("Error: 'musicians_data.csv' not found. Ensure the file exists in the correct folder.")
     exit()

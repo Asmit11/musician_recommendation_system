@@ -1,14 +1,14 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# ✅ Check if dataset exists
+#  Check if dataset exists
 try:
-    musicians_df = pd.read_csv("datasets/musicians_data.csv")  # Update path if needed
+    musicians_df = pd.read_csv("datasets/musicians_data.csv") 
 except FileNotFoundError:
     print(" Error: 'musicians_data.csv' not found. Ensure the file exists in the 'datasets/' folder.")
     exit()
 
-# ✅ Ensure 'genre_preferences' column exists
+# Ensure 'genre_preferences' column exists
 if "genre_preferences" in musicians_df.columns:
     # Convert string representation of lists to actual lists
     musicians_df["genre_preferences"] = musicians_df["genre_preferences"].apply(lambda x: eval(x) if isinstance(x, str) else x)
